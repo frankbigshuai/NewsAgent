@@ -1,0 +1,13 @@
+# 环境变量文件
+.env
+.env.local
+.env.production
+
+# API密钥文件
+**/api_keys.py
+**/secrets.py
+
+# 数据库文件
+*.db
+*.sqlite
+*.sqlite3
