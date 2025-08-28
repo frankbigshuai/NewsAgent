@@ -482,7 +482,7 @@ async def get_trending_news(limit: int = 20, category: Optional[str] = None):
          description="搜索新闻内容，支持个性化排序")
 async def search_news(query: str, user_id: Optional[str] = None, limit: int = 20):
     """
-    🔍 搜索新闻API
+    搜索新闻API
     如果提供user_id，会进行个性化排序
     """
     try:
@@ -528,13 +528,13 @@ async def search_news(query: str, user_id: Optional[str] = None, limit: int = 20
         
         return {
             "success": True,
-            "data": {
-                "query": query,
-                "total_results": len(search_results),
-                "results": search_results[:limit],
-                "personalized": user_id is not None
-            }
+            "total_results": len(search_results),
+            "news": search_results[:limit],
+            "query": query,
+            "personalized": user_id is not None,
+            "last_updated": datetime.now().isoformat()
         }
+        
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"搜索失败: {str(e)}")
 
