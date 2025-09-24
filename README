@@ -1,21 +1,27 @@
-NewsAgent - AI-Powered Tech News Recommendation System
+# NewsAgent - AI-Powered Tech News Recommendation System
+
 A comprehensive intelligent tech news recommendation platform that implements the complete pipeline from news acquisition, intelligent classification, user profiling to personalized recommendations.
-Overview
-NewsAgent addresses three core challenges in traditional news recommendation systems:
 
-Content Understanding - How to accurately understand and categorize tech news
-User Modeling - How to build precise user interest profiles
-Personalized Matching - How to achieve high-quality personalized recommendations
+## Overview
 
-Core Implementation
-1. Intelligent News Classification System
-Dual-Layer Classification Architecture:
+**NewsAgent addresses three core challenges in traditional news recommendation systems:**
 
-Primary Classifier: Google Gemini AI semantic understanding for accurate classification of complex content
-Backup Classifier: Keyword matching algorithm ensuring system stability
+1. **Content Understanding** - How to accurately understand and categorize tech news
+2. **User Modeling** - How to build precise user interest profiles  
+3. **Personalized Matching** - How to achieve high-quality personalized recommendations
 
-Technical Implementation:
-python# Support for 8 precise tech domain classifications
+## Core Implementation
+
+### 1. Intelligent News Classification System
+
+**Dual-Layer Classification Architecture:**
+
+- **Primary Classifier**: Google Gemini AI semantic understanding for accurate classification of complex content
+- **Backup Classifier**: Keyword matching algorithm ensuring system stability
+
+**Technical Implementation:**
+```python
+# Support for 8 precise tech domain classifications
 categories = {
     "ai_ml": "Artificial Intelligence/Machine Learning",
     "programming": "Programming/Development", 
@@ -26,22 +32,27 @@ categories = {
     "enterprise_saas": "Enterprise Services",
     "social_media": "Social Media"
 }
-Classification Performance:
+```
 
-Gemini AI classification accuracy: 90%+
-Keyword matching coverage: 85%+
-Processing speed: Average 2 seconds per article
+**Classification Performance:**
 
-2. User Profile Construction System
-Multi-dimensional Profile Building:
-a) Survey-based Profile Initialization
+- Gemini AI classification accuracy: 90%+
+- Keyword matching coverage: 85%+
+- Processing speed: Average 2 seconds per article
 
-5-step interest survey questionnaire
-Covers technical interests, professional background, reading habits, usage scenarios
-Generates initial interest weight distribution
+### 2. User Profile Construction System
 
-b) Behavioral Learning System
-python# Supported user behavior types
+**Multi-dimensional Profile Building:**
+
+#### a) Survey-based Profile Initialization
+
+- 5-step interest survey questionnaire
+- Covers technical interests, professional background, reading habits, usage scenarios
+- Generates initial interest weight distribution
+
+#### b) Behavioral Learning System
+```python
+# Supported user behavior types
 behavior_types = {
     'view': 0.01,      # Browse
     'click': 0.03,     # Click
@@ -53,53 +64,65 @@ behavior_types = {
     'dislike': -0.12,  # Dislike
     'skip': -0.04      # Skip
 }
-c) Intelligent Behavior Analysis
+```
 
-Reading Depth Recognition: Automatically identifies deep reading based on reading duration and scroll percentage
-Engagement Scoring: Calculates user engagement across multiple dimensions
-Anomaly Detection: Identifies and filters abnormal behavior patterns
+#### c) Intelligent Behavior Analysis
 
-3. High-Performance Recommendation Engine
-Multi-factor Recommendation Algorithm:
-python# Recommendation Score = Personalized Relevance(40%) + Keyword Match(30%) + Popularity(20%) + Recency(10%)
+- **Reading Depth Recognition**: Automatically identifies deep reading based on reading duration and scroll percentage
+- **Engagement Scoring**: Calculates user engagement across multiple dimensions
+- **Anomaly Detection**: Identifies and filters abnormal behavior patterns
+
+### 3. High-Performance Recommendation Engine
+
+**Multi-factor Recommendation Algorithm:**
+```python
+# Recommendation Score = Personalized Relevance(40%) + Keyword Match(30%) + Popularity(20%) + Recency(10%)
 personalized_score = (
     category_relevance * 0.4 +
     keyword_match * 0.3 + 
     hot_score * 0.2 +
     time_score * 0.1
 )
-Intelligent Diversity Control:
+```
 
-70% User core interest content
-20% Related domain expansion content
-10% Exploratory new content
+**Intelligent Diversity Control:**
 
-Three-layer Cache Optimization:
-pythoncache_system = {
+- 70% User core interest content
+- 20% Related domain expansion content  
+- 10% Exploratory new content
+
+**Three-layer Cache Optimization:**
+```python
+cache_system = {
     "News Data Cache": "30min TTL",
     "Recommendation Cache": "10min TTL", 
     "Personalized Score Cache": "5min TTL"
 }
-Performance Optimization Results:
+```
 
-Recommendation response time: Optimized from 1.7s to 0.3s
-Cache hit rate: 85%+
-System throughput: 5x improvement
+**Performance Optimization Results:**
 
-4. Complete Data Management System
-Data Persistence:
+- Recommendation response time: Optimized from 1.7s to 0.3s
+- Cache hit rate: 85%+
+- System throughput: 5x improvement
 
-SQLite database stores user profiles and behavior data
-Supports user profile evolution tracking
-Automatic data cleanup and maintenance
+### 4. Complete Data Management System
 
-Data Security:
+**Data Persistence:**
 
-Environment variable management for sensitive configurations
-Secure API key storage
-Encrypted user data storage
+- SQLite database stores user profiles and behavior data
+- Supports user profile evolution tracking
+- Automatic data cleanup and maintenance
 
-System Architecture
+**Data Security:**
+
+- Environment variable management for sensitive configurations
+- Secure API key storage
+- Encrypted user data storage
+
+## System Architecture
+
+```
 NewsAgent Core Architecture
 │
 ├── News Data Layer
@@ -129,34 +152,38 @@ NewsAgent Core Architecture
     ├── SQLite User Database
     ├── Behavior Log Storage
     └── Cache Management System
-Core Features
-Intelligent News Classification
+```
 
-Uses Google Gemini AI for semantic understanding
-Keyword matching as backup solution
-Supports Chinese and English news content
-Classification confidence scoring
+## Core Features
 
-User Profile System
+### Intelligent News Classification
 
-Survey Initialization: 5-step questionnaire establishes initial interest profile
-Behavior Learning: Real-time learning of user reading behaviors
-Dynamic Weighting: Dynamically adjusts interest weights based on user behavior
-Confidence Scoring: Tracks profile accuracy
+- Uses Google Gemini AI for semantic understanding
+- Keyword matching as backup solution
+- Supports Chinese and English news content
+- Classification confidence scoring
 
-Recommendation Algorithm
+### User Profile System
 
-Multi-factor Scoring: Personalized relevance + popularity + recency
-Diversity Control: 70% interest content + 20% related content + 10% exploration content
-Cache Optimization: Three-layer caching mechanism improves performance
+- **Survey Initialization**: 5-step questionnaire establishes initial interest profile
+- **Behavior Learning**: Real-time learning of user reading behaviors
+- **Dynamic Weighting**: Dynamically adjusts interest weights based on user behavior
+- **Confidence Scoring**: Tracks profile accuracy
 
-Technology Stack
+### Recommendation Algorithm
 
-Backend Framework: FastAPI
-AI Classification: Google Gemini API
-Database: SQLite
-Caching: In-memory cache system
-Deployment: Python/Docker
+- **Multi-factor Scoring**: Personalized relevance + popularity + recency
+- **Diversity Control**: 70% interest content + 20% related content + 10% exploration content
+- **Cache Optimization**: Three-layer caching mechanism improves performance
 
-License
+## Technology Stack
+
+- **Backend Framework**: FastAPI
+- **AI Classification**: Google Gemini API
+- **Database**: SQLite
+- **Caching**: In-memory cache system
+- **Deployment**: Python/Docker
+
+## License
+
 MIT License
