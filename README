@@ -1,9 +1,6 @@
-=======
------
-
 # NewsAgent - AI-Powered Tech News Recommendation System
 
-A comprehensive intelligent tech news recommendation platform that implements the complete pipeline from news acquisition, intelligent classification, user profiling to personalized recommendations.
+> A comprehensive intelligent tech news recommendation platform that implements the complete pipeline from news acquisition, intelligent classification, user profiling to personalized recommendations.
 
 ## Overview
 
@@ -117,7 +114,7 @@ cache_system = {
 
 -----
 
-### 4\. Complete Data Management System
+## Complete Data Management System
 
 **Data Persistence:**
 
@@ -190,4 +187,3 @@ NewsAgent Core Architecture
 ## License
 
 MIT License
->>>>>>> 9c908a2 (readme)
