@@ -1,25 +1,25 @@
 # NewsAgent - AI-Powered Tech News Recommendation System
 
-> A comprehensive intelligent tech news recommendation platform that implements the complete pipeline from news acquisition, intelligent classification, user profiling to personalized recommendations.
+A comprehensive intelligent tech news recommendation platform that implements the complete pipeline from news acquisition, intelligent classification, user profiling to personalized recommendations.
 
 ## Overview
 
 **NewsAgent addresses three core challenges in traditional news recommendation systems:**
 
-  - **Content Understanding** - How to accurately understand and categorize tech news
-  - **User Modeling** - How to build precise user interest profiles
-  - **Personalized Matching** - How to achieve high-quality personalized recommendations
+-   **Content Understanding** - How to accurately understand and categorize tech news
+-   **User Modeling** - How to build precise user interest profiles
+-   **Personalized Matching** - How to achieve high-quality personalized recommendations
 
------
+---
 
 ## Core Implementation
 
-### 1\. Intelligent News Classification System
+### 1. Intelligent News Classification System
 
 **Dual-Layer Classification Architecture:**
 
-  - **Primary Classifier**: Google Gemini AI semantic understanding for accurate classification of complex content
-  - **Backup Classifier**: Keyword matching algorithm ensuring system stability
+-   **Primary Classifier**: Google Gemini AI semantic understanding for accurate classification of complex content
+-   **Backup Classifier**: Keyword matching algorithm ensuring system stability
 
 **Technical Implementation:**
 
@@ -35,7 +35,7 @@ categories = {
     "enterprise_saas": "Enterprise Services",
     "social_media": "Social Media"
 }
-```
+````
 
 **Classification Performance:**
 
